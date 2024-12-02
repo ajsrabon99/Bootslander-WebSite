@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+header{
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 10%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Aligns image and text vertically centered */
+    font-size: 2rem;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: #00aa5b;
+}
+
+.logo-image {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    margin-right: 10px; /* Space between the image and text */
+    border-radius: 50%; /* Makes the image circular, if desired */
+}
+
+
+nav a{
+    font-size: 1.1rem;
+    color: white;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover{
+
+    border-bottom: 3px solid #00aa5b;
+}
+
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: 
+        linear-gradient(to right, rgba(4, 17, 193, 0.76), rgba(4, 0, 236, 0.938)), /* Gradient overlay */
+        url('assets/images/hero-bg-2.jpg') no-repeat center center/cover; /* Background image */
+    color: #fff;
+    padding: 8rem 20rem;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+.hero::after {
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust this for the height of the carved area */
+    background: 
+        linear-gradient(to bottom, rgb(0, 183, 255), rgb(11, 134, 155)); /* Gradient to make it look carved */
+    z-index: -1; /* Makes sure this pseudo-element stays behind the content */
+}
+.hero .container {
+    display: flex; /* Create a horizontal layout for content and image */
+    justify-content: space-between; /* Space between content and image */
+    flex-wrap: wrap; /* Ensure responsiveness */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    max-width: 50%; /* Restrict content to half the width */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem; /* Spacing below paragraph */
+    text-align: center;
+    color: #ffffff;
+}
+h1 span {
+    color: white; 
+    text-decoration: underline;
+    text-decoration-color: #00ff88;
+}
+
+/* Hero Section Buttons */
+.button-group {
+    display: flex; 
+    padding: 1rem 2.5rem;
+    gap: 1rem; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 1.5rem; 
+    float: right;
+    margin: 0.5rem 1.5rem 2rem 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #0fbc6b;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background: #00aa5b;
+}
+
+.hero .vdeo-btn {
+    display: inline-flex; 
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    gap: 0.5rem; 
+
+}
+
+.hero .vdeo-btn:hover {
+    color: #00ff88;
+}
+
+.hero .vdeo-img {
+    width: 20px; /* Adjust image size */
+    height: auto;
+}
+
+.hero-img {
+    width: 20%; /* Adjust width of the image */
+    max-width: 500px; /* Restrict maximum width */
+    flex-shrink: 0; /* Prevent shrinking on smaller screens */
+    right: 10%;
+}
+
+
+
+
+/* About Section */
+.about {
+    padding: 4rem 1rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Left side: About title and description */
+.about-info {
+    width: 50%; /* Adjust width of left side */
+    text-align: left;
+}
+
+.about-info h6 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #0fbc6b;
+}
+
+.about-info h3{
+    font-size: large;
+    color: #00254f;
+}
+
+.about-info p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Right side: Cards */
+.about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 50%; /* Adjust width of right side */
+}
+.about-cards h3{
+    font-size: 5rem;
+    color: #00254f;
+}
+/* About Section */
+.about {
+    padding: 4rem 1rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Left side: About title and description */
+.about-info {
+    width: 50%; /* Adjust width of left side */
+    text-align: left;
+}
+
+.about-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-info p {
+    font-size: 1rem;
+    color: #333;
+}
+.about-btn{
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #0fbc6b;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    gap: 1.5rem;
+}
+.about-btn:hover{
+    background-color: #00aa5b;
+}
+/* Right side: Cards using Grid */
+.about-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1rem; 
+    width: 50%; 
+    grid-template-areas: 
+        "card-1 card-2"  
+        "card-3 card-4"; 
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Assigning grid areas to cards */
+.card-1 {
+    grid-area: card-1;
+}
+
+.card-2 {
+    grid-area: card-2;
+}
+
+.card-3 {
+    grid-area: card-3;
+}
+
+.card-4 {
+    grid-area: card-4;
+}
+
+/* Responsive Design - For smaller screens */
+@media (max-width: 768px) {
+    .about-cards {
+        grid-template-columns: 1fr; /* Stack cards in one column */
+        grid-template-areas: 
+            "card-1" 
+            "card-2" 
+            "card-3" 
+            "card-4"; /* Stack the cards vertically */
+    }
+}
+
+/* Responsive Design - For smaller screens */
+@media (max-width: 768px) {
+    .about-cards {
+        grid-template-columns: 1fr; /* Stack cards in one column */
+    }
+}
+
+
+
+
+/* Features Section */
+.features-section {
+    padding: 4rem 0.5rem;
+    background-color: #f8f9fa; /* Light background */
+    text-align: center;
+}
+
+.features-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00254f;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 2rem; /* Space between feature cards */
+}
+
+/* Feature Card */
+.feature-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(181, 181, 181, 0.32);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left; /* Align content to the left */
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Align Image and Title */
+.feature-card-header {
+    display: flex; /* Enable Flexbox for alignment */
+    align-items: center; /* Align image and text vertically */
+    gap: 1rem; /* Space between image and heading */
+    margin-bottom: 0.4rem;
+}
+
+/* Feature Image */
+.feature-image {
+    width: 15%; /* Adjust size as needed */
+    object-fit: cover; /* Ensure the image fits */
+}
+
+/* Feature Title */
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0; /* Remove margin for proper alignment */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr; /* One column */
+    }
+}
+
+
+
+
+
+
+/* Services Section */
+.services {
+    background: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.services .service-item {
+    margin-bottom: 1rem;
+}
+
+.services h3 {
+    color: #007bff;
+}
+
+/* Contact Section */
+.contact {
+    padding: 2rem 0;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.contact input, .contact textarea, .contact button {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0.5rem auto;
+    padding: 0.75rem;
+}
+
+.contact button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
