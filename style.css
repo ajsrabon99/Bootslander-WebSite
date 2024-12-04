@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
 *{
     margin: 0;
-    padding: 3 3;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -16,10 +22,12 @@ html{
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
+
 
 h1, h2, h3 {
     margin: 0;
@@ -242,12 +250,18 @@ h1 span {
     color: #333;
 }
 
-.about-cards {
+
+.div-1, .div-2{
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
-    width: 50%; 
+    flex-direction: column;
+    gap: 10px;
+}
+.div-2{
+    position: absolute;
+    top: -20px;
+}
+.child-div-2{
+    position: relative;
 }
 .about-cards h3{
     font-size: 5rem;
@@ -258,6 +272,7 @@ h1 span {
     background-color: #f4f4f4;
     text-align: center;
 }
+
 
 .about .container {
     display: flex;
@@ -337,22 +352,8 @@ h1 span {
     grid-area: card-4;
 }
 
-@media (max-width: 768px) {
-    .about-cards {
-        grid-template-columns: 1fr; 
-        grid-template-areas: 
-            "card-1" 
-            "card-2" 
-            "card-3" 
-            "card-4"; 
-    }
-}
 
-@media (max-width: 768px) {
-    .about-cards {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 
 
@@ -408,17 +409,6 @@ h1 span {
     margin: 0; 
 }
 
-@media (max-width: 1024px) {
-    .features-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
-@media (max-width: 768px) {
-    .features-grid {
-        grid-template-columns: 1fr; 
-    }
-}
 
 
 
@@ -441,6 +431,7 @@ h1 span {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
+    position: relative;
 }
 
 .stats-card:hover {
@@ -452,7 +443,11 @@ h1 span {
     font-size: 3rem;
     color: #00aa5b;
     margin-bottom: 1rem;
+    position: absolute;
+    top: -10px;
+    left: 47%;
 }
+
 
 .stats-card h3 {
     font-size: 2rem;
@@ -466,17 +461,9 @@ h1 span {
     color: #555;
 }
 
-@media (max-width: 1024px) {
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
 
-@media (max-width: 768px) {
-    .stats-grid {
-        grid-template-columns: 1fr; 
-    }
-}
+
+
 
 
 /* Details Section */
@@ -546,17 +533,7 @@ h1 span {
 }
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .details-row {
-        flex-direction: column; 
-        text-align: center;
-    }
 
-    .details-row.reverse {
-        flex-direction: column; /* Stack image and details vertically for reverse rows as well */
-    }
-}
 
 
 
@@ -592,17 +569,8 @@ h1 span {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    }
-}
 
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* 1 column */
-    }
-}
+
 
 
 
@@ -764,17 +732,7 @@ h1 span {
     color: #007bff;
 }
 
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(1, 1fr); 
-    }
-}
-
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: 1fr; 
-    }
-}
+ 
 
 
 
@@ -788,8 +746,8 @@ h1 span {
 /* Pricing Grid */
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three plans side by side */
-    gap: 2rem; /* Space between cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
 }
 
 /* Pricing Card */
@@ -884,17 +842,7 @@ h1 span {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .pricing-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two plans per row */
-    }
-}
 
-@media (max-width: 768px) {
-    .pricing-grid {
-        grid-template-columns: 1fr; /* One plan per row */
-    }
-}
 
 
 
@@ -1092,12 +1040,7 @@ h1 span {
     background-color: #0fbc6b;
 }
 
-@media (max-width: 768px) {
-    .contact-form .form-row {
-        flex-direction: column; 
-    }
-}
-
+ 
 
 
 /* Footer Section */
@@ -1147,6 +1090,7 @@ h1 span {
 
 .social-icons {
     margin-top: 1rem;
+    margin-right: 15rem;
 }
 
 .social-icons a {
@@ -1190,14 +1134,24 @@ h1 span {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .footer-columns {
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
-    }
+
+
+.footer-bottom {
+    margin-top: 1rem;
+    border-top: 1px solid #00aa5b;
+    padding-top: 1.5rem;
+    text-align: center;
 }
 
-@media (max-width: 480px) {
-    .footer-columns {
-        grid-template-columns: 1fr; /* One column */
-    }
+.footer-bottom p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-top: 0.3rem;
+}
+
+.footer-bottom span{
+    font-weight: bold;
+}
+.footer-bottom .spn{
+    color: #00ff88;
 }
