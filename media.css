@@ -1,5 +1,19 @@
 /* for desktop */
 @media (max-width: 1024px) {
+    .hero {
+        padding: 8rem 15%;
+    }
+
+    .hero h1 {
+        font-size: 3rem; 
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    
+
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -14,7 +28,6 @@
 
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 columns */
     }
 
     .team-grid {
@@ -23,7 +36,6 @@
 
     .pricing-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* Two plans per row */
     }
 
 
@@ -43,27 +55,102 @@
 /* for mobile */
 @media (max-width: 768px) {
 
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+
+    .hero {
+        flex-direction: row; 
+        text-align: left;
+        padding: 8rem 10%;
+    }
+
+    .hero .container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .button-group{
+        font-size: 0.8rem;
+    }
+    .hero-content {
+        max-width: 50%; 
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; 
+        text-align: center;
+    }
+    span{
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+
+    }
+
+    .hero-img {
+        width: 40%; 
+        max-width: 500px;
+    }
+
+
+
+    .about .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .about-info, .about-cards {
+        max-width: 100%; 
+    }
+
     .about-cards {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "card-1"
-            "card-2"
-            "card-3"
-            "card-4";
+        grid-template-columns: 1fr; 
     }
+    
 
-    .div-2 {
-        position: static;
 
-    }
-
-    .about-cards {
-        grid-template-columns: 1fr;
-    }
 
     .features-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem; 
+        margin: 0 auto;
+        max-width: 1200px; 
     }
+    
+
+    .feature-card {
+        text-align: center;
+    }
+
+    .feature-card-header {
+        flex-direction: column;
+    }
+
+    .feature-image {
+        width: 40px; 
+    }
+
+    .feature-card h3 {
+        font-size: 1rem; 
+    }
+
+
+
 
     .stats-grid {
         grid-template-columns: 1fr;
@@ -76,28 +163,45 @@
 
     .details-row.reverse {
         flex-direction: column;
-        /* Stack image and details vertically for reverse rows as well */
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr;
-        /* 1 column */
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .team-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
     }
 
     .pricing-grid {
         grid-template-columns: 1fr;
         /* One plan per row */
     }
-    .contact-form .form-row {
+    .faq-content {
         flex-direction: column; 
     }
 
+    .faq-image {
+        order: 1; 
+        margin-bottom: 2rem;
+    }
+
+    .faq-questions {
+        order: 2; 
+    }
+    .contact-content {
+        flex-direction: column; 
+        gap: 2rem;
+    }
+
+    .contact-details,
+    .contact-form {
+        width: 100%; 
+    }
+
     .footer-columns {
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .container h1 {
@@ -137,6 +241,17 @@
 
 @media (max-width: 480px) {
     .footer-columns {
-        grid-template-columns: 1fr; /* One column */
+        grid-template-columns: 1fr; 
+    }
+    .faq-questions h2 {
+        font-size: 1.5rem; 
+    }
+
+    .faq-question {
+        font-size: 1rem; 
+    }
+
+    .dropdown-icon {
+        font-size: 1.2rem; 
     }
 }
